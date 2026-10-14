@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e3f8fa">
+  <meta name="description" content="لعبة بطل التقريب للأطفال: تعلم تقريب الأعداد واجمع النجوم!">
+  <title>بطل التقريب ⭐</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <header><span class="eyebrow">نلعب • نتعلّم • نتألّق</span><h1>🦸 بطل التقريب 🦸‍♀️</h1><p>قرّب الأعداد واجمع النجوم!</p></header>
+    <section id="setup" aria-labelledby="choose-title">
+      <h2 id="choose-title">اختر تحدّيك</h2>
+      <div class="levels" role="group" aria-label="مستوى التقريب">
+        <button class="level" data-base="10" aria-pressed="false">🌱<strong>أقرب 10</strong><small>العشرات</small></button>
+        <button class="level selected" data-base="100" aria-pressed="true">🌟<strong>أقرب 100</strong><small>المئات</small></button>
+        <button class="level" data-base="1000" aria-pressed="false">🚀<strong>أقرب 1000</strong><small>الآلاف</small></button>
+      </div>
+      <div class="tip"><strong>سرّ التقريب 💡</strong><p>انظر إلى الرقم يمين المنزلة المطلوبة:<br>من 0 إلى 4 نبقيها، ومن 5 إلى 9 نزيدها واحدًا.<br>ثم نحول الأرقام على يمينها إلى أصفار.</p></div>
+      <button id="start" class="primary">هيّا نلعب! ←</button><p class="note">10 أسئلة · 10 نقاط لكل إجابة صحيحة · بدون مؤقّت</p>
+    </section>
+    <section id="game" hidden aria-label="اللعبة">
+      <div class="status"><span id="counter"></span><span id="score">⭐ 0 نقطة</span></div>
+      <progress id="progress" max="10" value="0" aria-label="الأسئلة المكتملة"></progress>
+      <h2 id="question" tabindex="-1"></h2>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" role="status" aria-live="polite"></div>
+      <button id="next" class="primary" hidden>السؤال التالي ←</button>
+      <button id="home" class="text-button">العودة لاختيار المستوى</button>
+    </section>
+    <section id="result" hidden aria-labelledby="result-title">
+      <div class="trophy" aria-hidden="true">🏆</div><h2 id="result-title" tabindex="-1"></h2><p id="result-message"></p>
+      <div id="final-score" class="final-score"></div><p id="best"></p>
+      <button id="again" class="primary">نلعب مرة ثانية ↻</button><button id="change" class="text-button">اختيار مستوى آخر</button>
+    </section>
+    <footer>كل محاولة تجعلك أفضل 🌈</footer>
+  </main>
+</body>
+</html>
